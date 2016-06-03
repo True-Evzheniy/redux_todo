@@ -1,2 +1,2 @@
 export * from './App'
-export default from './VisibleTodoList'
+export {default as VisibleTodoList } from './VisibleTodoList'

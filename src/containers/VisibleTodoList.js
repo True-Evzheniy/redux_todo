@@ -32,9 +32,12 @@ const getVisibleTasks = (todos, visibilityFilter, categories) => {
     return !!counter;
   }
 
-  return filteringTasks.filter( (item) => {
-    return filtrationOr(item.categories, arrayToFiltering)
-  })
+  if(arrayToFiltering.length) {
+    return filteringTasks.filter( (item) => {
+      return filtrationOr(item.categories, arrayToFiltering)
+    })
+  }
+  return filteringTasks
 
 }
 
