@@ -1,5 +1,5 @@
 
-import { SET_VISIBILITY_FILTER } from '../constants'
+import { SET_VISIBILITY_FILTER } from 'constants'
 const initialState = 'SHOW_ALL'
 
 const visibilityFilter = (state = initialState, action) => {

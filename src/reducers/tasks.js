@@ -22,7 +22,7 @@ const task = (state, action) => {
     case DELETE_CATEGORY:
       let newCategories = state.categories.slice()
       const numberDeleteCategory = newCategories.indexOf(action.category)
-      if(~numberDeleteCategory){
+      if (~numberDeleteCategory) {
         newCategories.splice(numberDeleteCategory, 1)
       }
       return {...state, categories: newCategories}
@@ -50,10 +50,7 @@ const tasks = (state = [], action) => {
 
     case DELETE_TASK:
       return state.filter( (itemTaskList) => {
-        if (itemTaskList.id === action.id) {
-          return false
-        }
-        return true
+         return !(itemTaskList.id === action.id)
       })
 
     case DELETE_CATEGORY:
