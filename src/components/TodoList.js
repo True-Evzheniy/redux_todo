@@ -12,7 +12,7 @@ class TodoList extends React.Component {
           key={task.id}
           id={task.id}
           checked={task.checked}
-          checkedTask={this.props.checkedTask(task.id)}
+          checkedTask={this.props.checkedTask}
           />
         ))
       }
