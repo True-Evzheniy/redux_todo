@@ -1,7 +1,7 @@
 import {bindActionCreators} from 'redux'
 import {connect} from 'react-redux'
 import {TodoList} from 'components'
-import {checkedTask} from 'actions'
+import {checkedTask, editTaskText, deleteTask} from 'actions'
 
 const getVisibleTasks = (todos, visibilityFilter, categories) => {
   let filteringTasks;
@@ -48,7 +48,9 @@ const mapStateToProps = (state) => ({
 })
 
 const mapDispatchToProps = (dispatch) => ({
-  checkedTask: bindActionCreators(checkedTask, dispatch)
+  checkedTask: bindActionCreators(checkedTask, dispatch),
+  editTaskText: bindActionCreators(editTaskText, dispatch),
+  deleteTask: bindActionCreators(deleteTask, dispatch)
 })
 
 const visibleTodoList = connect(mapStateToProps, mapDispatchToProps)(TodoList)

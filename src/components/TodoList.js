@@ -1,10 +1,8 @@
 import React from 'react'
 import {TodoItem} from 'components'
 
-console.log(TodoItem);
 class TodoList extends React.Component {
   render () {
-    console.log(this.props.tasks);
     return <div className="TodoList">
       {
         this.props.tasks.map((task)=>(<TodoItem
@@ -13,6 +11,8 @@ class TodoList extends React.Component {
           id={task.id}
           checked={task.checked}
           checkedTask={this.props.checkedTask}
+          editTaskText={this.props.editTaskText}
+          deleteTask={this.props.deleteTask}
           />
         ))
       }

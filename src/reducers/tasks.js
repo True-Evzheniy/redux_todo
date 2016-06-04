@@ -2,6 +2,7 @@ import {
   ADD_TASK,
   CHECKED_TASK,
   DELETE_TASK,
+  EDIT_TASK_TEXT,
   DELETE_CATEGORY,
   ADD_CATEGORY
 } from 'constants'
@@ -29,6 +30,13 @@ const task = (state, action) => {
 
     case ADD_CATEGORY:
       return {...state, categoies: state.categories.concat([action.category])}
+
+    case EDIT_TASK_TEXT:
+        return ({
+          ...state,
+          text: action.text
+        })
+
     default:
       return state
   }
@@ -65,6 +73,14 @@ const tasks = (state = [{id: 1, text: 'хуйпизда', checked: false, catego
         }
         return itemTaskList
       })
+
+    case EDIT_TASK_TEXT:
+    return state.map( (itemTaskList) => {
+      if ( itemTaskList.id === action.id ) {
+        return task( itemTaskList, action)
+      }
+      return itemTaskList
+    })
 
     default:
       return state
