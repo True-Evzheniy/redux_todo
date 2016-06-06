@@ -1,4 +1,5 @@
 import React from 'react'
+import './TodoItem.scss'
 
 class TodoItem extends React.Component {
   handleAddCategory () {
@@ -16,13 +17,14 @@ class TodoItem extends React.Component {
       checked
     } = this.props
 
-    return <div>
+    return <div className="TodoItem">
       <input
         className="TodoItem__checkbox"
         type="checkbox" checked={checked}
         onChange={() => checkedTask(id)}
         />
       <input
+        className="TodoItem__text"
         type="text"
         value={text}
         onChange={ (e) => editTaskText(id, e.target.value) }

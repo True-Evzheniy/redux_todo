@@ -1,0 +1,5 @@
+.TodoFilter {
+  input:checked + label {
+    font-weight: bold;
+  }
+}

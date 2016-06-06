@@ -12,8 +12,8 @@ class Todo extends Component {
       <h1>TODO (based on redux)</h1>
       <CreatorContainer />
       <FilterContainer />
-      <VisibleTodoList />
       <CategoriesContainer />
+      <VisibleTodoList />
     </div>
   }
 }

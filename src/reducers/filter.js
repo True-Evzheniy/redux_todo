@@ -1,6 +1,6 @@
 
 import { SET_VISIBILITY_FILTER } from 'constants'
-const initialState = 'SHOW_ALL'
+const initialState = 'ALL_TASKS'
 
 const visibilityFilter = (state = initialState, action) => {
 
