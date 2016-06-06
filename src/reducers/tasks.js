@@ -42,7 +42,7 @@ const task = (state, action) => {
   }
 }
 
-const tasks = (state = [{id: 1, text: 'хуйпизда', checked: false, categories: []}], action) => {
+const tasks = (state = [{id: 1, text: 'some text task', checked: false, categories: []}], action) => {
   switch (action.type) {
 
     case ADD_TASK:
