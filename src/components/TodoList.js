@@ -11,6 +11,7 @@ class TodoList extends React.Component {
       addCategory
     } = this.props
     return <div className="TodoList">
+      <hr />
       {
         tasks.map((task)=>(<TodoItem
           text={task.text}

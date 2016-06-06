@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import './Todo.scss'
 import {
   VisibleTodoList,
   FilterContainer,
@@ -8,7 +9,7 @@ import {
 
 class Todo extends Component {
   render() {
-    return <div>
+    return <div className="Todo">
       <h1>TODO (based on redux)</h1>
       <CreatorContainer />
       <FilterContainer />

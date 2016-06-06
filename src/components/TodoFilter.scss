@@ -1,4 +1,12 @@
 .TodoFilter {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 10px;
+
+  &__toggle {
+    cursor: pointer;
+  }
+
   input:checked + label {
     font-weight: bold;
   }

@@ -1,0 +1,16 @@
+.TodoCreator {
+  margin-bottom: 10px;
+
+  &__input {
+    display: inline-block;
+    width: 70%;
+    font-size: 1.5rem;
+    box-sizing: border-box;
+  }
+
+  &__btn {
+    width: 30%;
+    font-size: 1.5rem;
+    box-sizing: border-box;
+  }
+}

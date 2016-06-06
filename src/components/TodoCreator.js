@@ -1,4 +1,5 @@
 import React from 'react'
+import './TodoCreator.scss'
 
 class TodoCreator extends React.Component {
   handleCreateBtn () {
