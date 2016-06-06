@@ -1,6 +1,6 @@
 import {ADD_CATEGORY, DELETE_CATEGORY, CHECKED_CATEGORY} from 'constants'
 
-export const categories = (state = [], action) => {
+export const categories = (state = [{id: 1, text: 'bla-bla', checked: false}], action) => {
   switch (action.type) {
 
     case ADD_CATEGORY:

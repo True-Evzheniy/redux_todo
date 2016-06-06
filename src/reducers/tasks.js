@@ -29,7 +29,7 @@ const task = (state, action) => {
       return {...state, categories: newCategories}
 
     case ADD_CATEGORY:
-      return {...state, categoies: state.categories.concat([action.category])}
+      return {...state, categories: state.categories.concat([action.category])}
 
     case EDIT_TASK_TEXT:
         return ({

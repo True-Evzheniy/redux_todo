@@ -7,7 +7,8 @@ class TodoList extends React.Component {
       tasks,
       checkedTask,
       editTaskText,
-      deleteTask
+      deleteTask,
+      addCategory
     } = this.props
     return <div className="TodoList">
       {
@@ -19,6 +20,7 @@ class TodoList extends React.Component {
           checkedTask={checkedTask}
           editTaskText={editTaskText}
           deleteTask={deleteTask}
+          addCategory={addCategory}
           />
         ))
       }
