@@ -17,23 +17,31 @@ class TodoItem extends React.Component {
       checked
     } = this.props
 
-    return <div className="TodoItem">
-      <input
-        className="TodoItem__checkbox"
-        type="checkbox" checked={checked}
-        onChange={() => checkedTask(id)}
-        />
-      <input
-        className="TodoItem__text"
-        type="text"
-        value={text}
-        onChange={ (e) => editTaskText(id, e.target.value) }
-        />
-      <div className="TodoItem__delete" onClick={() => deleteTask(id)}> x </div>
-      <input ref="input" className="TodoItem__addCategory" type="text" />
-      <button className="TodoItem__btn" onClick={::this.handleAddCategory}>Добавить категорию</button>
+    return (
+      <div className="TodoItem">
+        <input
+          className="TodoItem__checkbox"
+          type="checkbox" checked={checked}
+          onChange={() => checkedTask(id)}
+          />
+        <input
+          className="TodoItem__text"
+          type="text"
+          value={text}
+          onChange={ (e) => editTaskText(id, e.target.value) }
+          />
+        <div
+          className="TodoItem__delete" 
+          onClick={() => deleteTask(id)}> x </div>
+        <input
+          className="TodoItem__addCategory"
+          ref="input"
+          type="text" />
+        <button
+          className="TodoItem__btn"
+          onClick={::this.handleAddCategory}>Добавить категорию</button>
     </div>
-  }
+  )}
 }
 
 export default TodoItem;

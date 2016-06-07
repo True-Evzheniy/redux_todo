@@ -10,10 +10,12 @@ class TodoCreator extends React.Component {
   }
 
   render () {
-    return <div className="TodoCreator">
-      <input className="TodoCreator__input" ref="input" type="text" />
-      <button className="TodoCreator__btn" onClick={::this.handleCreateBtn}>Добавить</button>
+    return (
+      <div className="TodoCreator">
+        <input className="TodoCreator__input" ref="input" type="text" />
+        <button className="TodoCreator__btn"    onClick={::this.handleCreateBtn}>Добавить</button>
     </div>
+  )
   }
 }
 

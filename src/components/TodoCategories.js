@@ -8,7 +8,8 @@ class TodoCategories extends React.Component {
       deleteCategory,
       checkedCategory
     } = this.props
-    return <div className="Todo__Categories">
+    return (
+      <div className="Todo__Categories">
       {
         categories.map( item => (
           <TodoCategory
@@ -22,7 +23,7 @@ class TodoCategories extends React.Component {
         ))
       }
     </div>
-  }
+  )}
 }
 
 export default TodoCategories;

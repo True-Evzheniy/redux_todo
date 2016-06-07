@@ -13,15 +13,16 @@ class TodoList extends React.Component {
     return <div className="TodoList">
       <hr />
       {
-        tasks.map((task)=>(<TodoItem
-          text={task.text}
-          key={task.id}
-          id={task.id}
-          checked={task.checked}
-          checkedTask={checkedTask}
-          editTaskText={editTaskText}
-          deleteTask={deleteTask}
-          addCategory={addCategory}
+        tasks.map((task)=>(
+          <TodoItem
+            text={task.text}
+            key={task.id}
+            id={task.id}
+            checked={task.checked}
+            checkedTask={checkedTask}
+            editTaskText={editTaskText}
+            deleteTask={deleteTask}
+            addCategory={addCategory}
           />
         ))
       }
